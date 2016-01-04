@@ -1,6 +1,60 @@
-html, body, header, nav, ul, li, section {
+html, body, header, nav, ul, li, section, img {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/**********************************************
+NAVIGATION
+***********************************************/
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+ul {
+  list-style: none;
+}
+
+ul#nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  /*border: solid black 3px;*/
+}
+
+ul#nav-links li {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px black solid;
+}
+
+ul#menu-icon {
+  width: 3.5em;
+  margin-left: auto;
+  /*border: 1px solid black;*/
+}
+
+nav img {
+  width: 100%;
+  padding: .5em;
+}
+
+/**********************************************
+IMAGES
+***********************************************/
+div.image {
+  text-align: center;
+}
+
+img#me {
+  width: 30%;
+  border-radius: 100%;
 }
