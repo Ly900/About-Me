@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 
-html, body, div, header, nav, ul, li, section, img {
+html, body, div, header, nav, ul, li, section, img, h1, h2, p {
   margin: 0;
   border: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 section {
-  margin: 10px;
+  margin: 0 10px;
 }
 
 /**********************************************
@@ -28,13 +28,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*border: 1px solid red;*/
-  margin-bottom: 15px;
   font-size: 1rem;
-  /*background-color: HSL(26, 95%, 60%);*/
   background-color: #FFE800;
-  /*box-shadow: 0px 1px 5px black;*/
   color: black;
+  font-variant:small-caps;
+  position: fixed;
+  width: 100%;
 }
 
 ul {
@@ -50,7 +49,7 @@ ul#nav-links {
 
 ul#nav-links li:first-child {
   /*border-top: 1px solid #F3DB00;*/
-  background-color:#FFE800;
+  /*background-color:#FFE800;*/
 }
 
 ul#nav-links li {
@@ -60,20 +59,39 @@ ul#nav-links li {
   font-size: 1.2rem;
   border-bottom: 1px solid #F1DB00;
   /*border-top: 1px solid white;*/
+  /*box-shadow: 1px 0px 1px black;*/
 }
 
 ul#nav-links li:hover {
-  background-color: #F1DB00;
+  background-color: #F2DD00;
   font-weight: 600;
+  cursor: pointer;
 }
 
-ul#menu-icon {
+ul#nav-links li:active {
+  background-color: #FFEF4F;
+  font-weight: 600;
+  border: white;
+}
+
+ul#brand-and-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
-  text-align: right;
   border-bottom: 1px solid #F1DB00;
 }
 
-ul#menu-icon img {
+ul#brand-and-icon li:first-child {
+  margin-right: auto;
+}
+
+ul#brand-and-icon li:last-child {
+  cursor: pointer;
+}
+
+
+ul#brand-and-icon img {
   width: 1.8rem;
   margin: .2rem;
 }
@@ -89,18 +107,46 @@ img#me {
   width: 30%;
   border-radius: 100%;
   margin-bottom: 15px;
-}
-
-p.one {
-
-}
-
-p.two {
-
+  border: 2px solid black;
 }
 
 /**********************************************
-TEST
+HEADINGS
+***********************************************/
+h1 {
+  font-size: 1rem;
+  margin-left: 5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h1:hover {
+  font-size: 1rem;
+  margin-left: 5px;
+  font-weight: 700;cursor:bold;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/**********************************************
+SECTIONS
+***********************************************/
+section.first {
+  padding-top: 50px;
+}
+
+section.image {
+  padding-top: 150px;
+}
+
+
+/**********************************************
+COLOR SCHEME
 ***********************************************/
 div.box:nth-child(1) {
   width: 50px;

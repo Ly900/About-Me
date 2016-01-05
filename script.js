@@ -2,9 +2,9 @@ $(document).ready(function(){
 
   $("ul#nav-links").hide();
 
-  $("ul#menu-icon").on("click", function(){
+  $("ul#brand-and-icon").on("click", function(){
     $("ul#nav-links").fadeToggle("fast", function(){
-
+      $("section.first").toggleClass("image");
     });
   });
 
