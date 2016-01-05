@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
-@import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
 html, body, div, header, nav, ul, li, section, img, h1, h2, p {
@@ -10,7 +9,7 @@ html, body, div, header, nav, ul, li, section, img, h1, h2, p {
 }
 
 html {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 body {
@@ -117,6 +116,10 @@ img#me {
   border: 2px solid black;
 }
 
+img#heart {
+width: 15px;  
+}
+
 /**********************************************
 HEADINGS
 ***********************************************/
@@ -153,22 +156,39 @@ h3 {
   font-weight: 600;
 }
 
-/* Used for subtitles */
+/* Used for brand statement, which is hidden in mobile */
 h4 {
+  display: none;
+}
+
+/* Used for subtitles */
+h5 {
   margin: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: .2rem;
+  text-align: center;
+  color: #00BD9D;
+}
+
+section.projects h5 {
   color: #FA8C3A;
 }
+
 
 /**********************************************
 LINKS
 ***********************************************/
+a.section-link {
+  font-weight: 600;
+}
 
+a.section-link:hover {
+  color: #00BE9D;
+}
 
 /**********************************************
-SECTIONS
+SECTIONS AND PARAGRAPHS
 ***********************************************/
 section.image {
   max-width: 100%;
@@ -180,8 +200,23 @@ section.moved {
   padding-top: 170px;
 }
 
-section.about-me {
+section.section-info {
   margin: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: .8rem;
+}
+
+/**********************************************
+FONT SIZES
+***********************************************/
+
+ul#technologies li {
+  font-size: .8rem;
+  list-style-type: square;
+  list-style-position: inside;
 }
 
 /**********************************************
