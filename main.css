@@ -15,10 +15,6 @@ body {
   font-weight: 400;
 }
 
-section {
-  margin: 0 10px;
-}
-
 /**********************************************
 NAVIGATION
 ***********************************************/
@@ -38,40 +34,6 @@ nav {
 
 ul {
   list-style: none;
-}
-
-ul#nav-links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-
-ul#nav-links li:first-child {
-  /*border-top: 1px solid #F3DB00;*/
-  /*background-color:#FFE800;*/
-}
-
-ul#nav-links li {
-  padding: 5px;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
-  border-bottom: 1px solid #F1DB00;
-  /*border-top: 1px solid white;*/
-  /*box-shadow: 1px 0px 1px black;*/
-}
-
-ul#nav-links li:hover {
-  background-color: #F2DD00;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-ul#nav-links li:active {
-  background-color: #FFEF4F;
-  font-weight: 600;
-  border: white;
 }
 
 ul#brand-and-icon {
@@ -96,10 +58,46 @@ ul#brand-and-icon img {
   margin: .2rem;
 }
 
+ul#nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+ul#nav-links li:first-child {
+  /*background-color:#FFF31B;*/
+}
+
+ul#nav-links li {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #F1DB00;
+  /*border-top: 1px solid white;*/
+  /*box-shadow: 1px 0px 1px black;*/
+}
+
+ul#nav-links li:hover {
+  background-color: #F2DD00;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+ul#nav-links li:active {
+  /*background-color: #FFEF4F;*/
+  /*background-color: #FFF13D;*/
+  background-color: #FBF366;
+  font-weight: 600;
+  border: none;
+}
+
 /**********************************************
 IMAGES
 ***********************************************/
 div.image {
+  width: 100%;
   text-align: center;
 }
 
@@ -128,19 +126,30 @@ h1:hover {
 }
 
 h2 {
+  margin-left: 8px;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 /**********************************************
-SECTIONS
+LINKS
 ***********************************************/
-section.first {
-  padding-top: 50px;
+nav a {
+  text-decoration: none;
+  color: black;
 }
 
+/**********************************************
+SECTIONS
+***********************************************/
 section.image {
+  width: 100%;
+  padding-top: 50px;
+  background-color: #FFF13D;
+}
+
+section.moved {
   padding-top: 150px;
 }
 
