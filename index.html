@@ -58,7 +58,7 @@
   </header>
 
   <!-- ABOUT ME SECTION -->
-  <section class="section-info about-me">
+  <section class="section-info" id="about-me">
     <h5>About Me</h5>
     <p>
       My name is Ly and I am a graduate of
@@ -68,26 +68,42 @@
     <p>
       I value hard work, dedication, and persistence. I enjoy solving problems and love to learn new skills.
     </p>
+
+    <!-- Favorite Technologies -->
     <p>
-      I <img src="images/heart.png" alt="heart" id="heart"/> :
-      <ul id="technologies">
-        <li>HTML 5/CSS 3</li>
-        <li>Javascript</li>
-        <li>JQuery</li>
-        <li>Angular</li>
-      </ul>
+      I <img src="images/heart.png" alt="heart" id="heart"/> to do work that involves:
     </p>
+
+    <div class="container">
+      <div class="row">
+      <ul id="technologies">
+        <div class="col-sm-2">
+        <li class="label label-primary">HTML 5/CSS 3</li>
+        </div>
+        <div class="col-sm-2">
+        <li class="label label-success">Javascript</li>
+        </div>
+        <div class="col-sm-2">
+        <li class="label label-info">JQuery</li>
+        </div>
+        <div class="col-sm-2">
+        <li class="label label-warning">Angular</li>
+        </div>
+      </ul>
+    </div>
+    </div class="container">
+
   </section>
 
   <!-- PROJECTS -->
-  <section class="section-info projects">
+  <section class="section-info" id="projects">
     <h5>Projects</h5>
     <p>
       Check out some of the projects I've worked on below:
     </p>
   </section>
 
-  <section class="section-info resume">
+  <section class="section-info" id="resume">
 
     <p class="one">
       Learn more in-depth about me by reading my resume below.

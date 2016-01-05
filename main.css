@@ -117,7 +117,7 @@ img#me {
 }
 
 img#heart {
-width: 15px;  
+width: 15px;
 }
 
 /**********************************************
@@ -171,7 +171,7 @@ h5 {
   color: #00BD9D;
 }
 
-section.projects h5 {
+section#projects h5 {
   color: #FA8C3A;
 }
 
@@ -204,9 +204,41 @@ section.section-info {
   margin: 1rem;
 }
 
+section#projects {
+
+}
+
 p {
   margin-bottom: 1rem;
   font-size: .8rem;
+}
+
+/**********************************************
+CONTAINERS
+***********************************************/
+div.row {
+  text-align: center;
+}
+
+
+
+div.col-sm-2 {
+
+}
+
+/**********************************************
+LISTS
+***********************************************/
+
+ul#technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+ul#technologies li {
+  font-weight: 200;
+  color: white;
 }
 
 /**********************************************
@@ -217,6 +249,7 @@ ul#technologies li {
   font-size: .8rem;
   list-style-type: square;
   list-style-position: inside;
+  text-align: center;
 }
 
 /**********************************************
