@@ -6,14 +6,21 @@
   <!-- Code below ensures proper rendering and touch zooming -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
+  <!-- link jquery CDN -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
   <!-- link CSS stylesheet -->
   <link href="main.css" rel="stylesheet" type="text/css"/>
-
-  <!-- link jquery CDN -->
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
   <!-- link my script -->
   <script src="script.js"></script>
@@ -24,9 +31,8 @@
 <body>
   <header>
     <nav>
-
       <ul id="brand-and-icon">
-        <li><h1><a href="index.html">Ly N.</a></h1></li>
+        <li><h1><a href="index.html" id="logo">Ly N.</a></h1></li>
         <li id="menu-icon"><img src="menu-icon.png" alt="menu icon"/></li>
       </ul>
 
@@ -36,17 +42,24 @@
         <li>Portfolio</li>
         <li>Resume</li>
       </ul>
-
     </nav>
+
+    <!-- Profile image and blurb -->
+    <section class="image">
+      <div class="image">
+        <img src="me.jpg" id="me"/>
+        <h3>Full-stack developer, CSS/design lover, former teacher</h3>
+      </div>
+    </section>
+
   </header>
-  <section class="image">
-    <div class="image">
-      <img src="me.jpg" id="me"/>
-    </div>
-  </section>
+
+
+
+
 
   <section>
-    <h2>About Me</h2>
+    <h4>About Me</h4>
   </section>
 
 
@@ -67,6 +80,5 @@
     <div class="box"></div>
     <div class="box"></div>
   </section>
-
 </body>
 </html>

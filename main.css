@@ -9,18 +9,20 @@ html, body, div, header, nav, ul, li, section, img, h1, h2, p {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
   font-size: 1rem;
   letter-spacing: 1px;
-  /*padding: 10px;*/
   font-family: raleway, sans-serif;
   font-weight: 400;
 }
 
 /**********************************************
-NAVIGATION
+NAVIGATION and NAVIGATION LINKS
 ***********************************************/
-
 nav {
   display: flex;
   flex-direction: column;
@@ -48,13 +50,12 @@ ul#brand-and-icon {
 
 ul#brand-and-icon li:first-child {
   margin-right: auto;
-  font-family: Bonbon, cursive;
+  cursor: pointer;
 }
 
 ul#brand-and-icon li:last-child {
   cursor: pointer;
 }
-
 
 ul#brand-and-icon img {
   width: 1.8rem;
@@ -84,8 +85,8 @@ ul#nav-links li {
 
 ul#nav-links li:hover {
   background-color: #F2DD00;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
 }
 
 ul#nav-links li:active {
@@ -94,6 +95,11 @@ ul#nav-links li:active {
   background-color: #FBF366;
   font-weight: 600;
   border: none;
+}
+
+nav a, a:hover {
+  text-decoration: none;
+  color: black;
 }
 
 /**********************************************
@@ -105,7 +111,7 @@ div.image {
 }
 
 img#me {
-  width: 30%;
+  max-width: 30%;
   border-radius: 100%;
   margin-bottom: 15px;
   border: 2px solid black;
@@ -114,20 +120,41 @@ img#me {
 /**********************************************
 HEADINGS
 ***********************************************/
+
+/* Used for brand logo */
 h1 {
+  font-family: Bonbon, cursive;
   font-size: 1.5rem;
   margin: .5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: .2rem;
 }
 
 h1:hover {
-  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
 }
 
+/* Used for nav links */
 h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+}
+
+/* Used for blurb */
+h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  max-width: 60%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Used for subtitles */
+h4 {
   margin: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -138,16 +165,13 @@ h2 {
 /**********************************************
 LINKS
 ***********************************************/
-nav a {
-  text-decoration: none;
-  color: black;
-}
+
 
 /**********************************************
 SECTIONS
 ***********************************************/
 section.image {
-  width: 100%;
+  max-width: 100%;
   padding-top: 70px;
   background-color: #FFF13D;
 }
