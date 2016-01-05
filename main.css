@@ -58,7 +58,7 @@ ul#brand-and-icon li:last-child {
 
 ul#brand-and-icon img {
   width: 1.8rem;
-  margin: .2rem;
+  padding: .1rem;
 }
 
 ul#nav-links {
@@ -122,6 +122,11 @@ img#heart {
 
 img#resume {
   max-width: 33%;
+}
+
+img#memory-game {
+  max-width: 90%;
+  margin-top: .5rem;
 }
 
 /**********************************************
@@ -203,7 +208,7 @@ section {
 
 section.image {
   max-width: 100%;
-  padding-top: 70px;
+  padding-top: 60px;
   background-color: #FFF13D;
 }
 
