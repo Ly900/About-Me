@@ -16,7 +16,7 @@ body {
   font-size: 1rem;
   letter-spacing: 1px;
   font-family: raleway, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /**********************************************
@@ -29,10 +29,10 @@ nav {
   align-items: center;
   font-size: 1rem;
   background-color: #FFE800;
-  color: black;
   font-variant:small-caps;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 ul {
@@ -117,7 +117,11 @@ img#me {
 }
 
 img#heart {
-width: 15px;
+  width: 15px;
+}
+
+img#resume {
+  max-width: 33%;
 }
 
 /**********************************************
@@ -153,7 +157,7 @@ h3 {
   max-width: 60%;
   margin: 0 auto;
   padding-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Used for brand statement, which is hidden in mobile */
@@ -193,6 +197,10 @@ a.section-link:hover {
 /**********************************************
 SECTIONS AND PARAGRAPHS
 ***********************************************/
+section {
+  text-align: center;
+}
+
 section.image {
   max-width: 100%;
   padding-top: 70px;
