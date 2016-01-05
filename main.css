@@ -175,6 +175,9 @@ section#projects h5 {
   color: #FA8C3A;
 }
 
+section#resume h5 {
+  color: #2E79B9;
+}
 
 /**********************************************
 LINKS
@@ -202,6 +205,12 @@ section.moved {
 
 section.section-info {
   margin: 1rem;
+}
+
+section#about-me,
+section#projects {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #F4F4F4;
 }
 
 p {
