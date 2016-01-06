@@ -125,8 +125,8 @@ img#resume {
 }
 
 img#memory-game {
-  max-width: 90%;
-  margin-top: .5rem;
+  max-width: 100%;
+  margin: .5rem 0;
 }
 
 /**********************************************
@@ -171,7 +171,7 @@ h4 {
 }
 
 /* Used for subtitles */
-h5 {
+h5, section#resume h5 {
   margin: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -184,18 +184,23 @@ section#projects h5 {
   color: #FA8C3A;
 }
 
-section#resume h5 {
-  color: #2E79B9;
+/* Used for project descriptions */
+.project-small {
+  font-size: .7rem;
 }
 
 /**********************************************
 LINKS
 ***********************************************/
-a.section-link {
+a:link, a:active, a:visited {
+  color: #2E79B9;
+}
+
+a.section-link, p a {
   font-weight: 600;
 }
 
-a.section-link:hover {
+a.section-link:hover, p a:hover {
   color: #00BE9D;
 }
 
@@ -236,7 +241,7 @@ footer {
   height: 50px;
   background-color: #FFE800;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 footer p {
@@ -244,10 +249,47 @@ footer p {
   margin: .8rem;
 }
 /**********************************************
-CONTAINERS
+CONTAINERS AND DIVS
 ***********************************************/
 div.row {
   text-align: center;
+}
+
+div.all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div.project-image {
+  text-align: center;
+  width: 100%;
+  flex-grow: 2;
+}
+
+div.card-wrapper {
+  max-width: 30%;
+  min-width: 250px;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #CBC9C9;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+div.description-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+div.description {
+  width: 60%;
 }
 
 /**********************************************
@@ -263,6 +305,11 @@ ul#technologies {
 ul#technologies li {
   font-weight: 200;
   color: white;
+}
+
+div.languages li {
+  list-style: square;
+  list-style-position: inside;
 }
 
 /**********************************************
