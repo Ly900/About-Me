@@ -265,7 +265,12 @@ div.all-cards {
 div.project-image {
   text-align: center;
   width: 100%;
-  flex-grow: 2;
+  height: 150px;
+  overflow: hidden;
+}
+
+div.project-image img {
+  height: 150px;
 }
 
 div.card-wrapper {
@@ -282,14 +287,23 @@ div.card-wrapper {
 }
 
 div.description-container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
-  flex-direction: row;
-  list-style: none;
+  flex-direction: column-reverse;
+  align-contents: space-around;
+  align-items: stretch;
+  flex-grow: 2;
+  /*margin-top: .2rem;*/
 }
 
-div.description {
-  width: 60%;
+div.languages {
+  margin-bottom: auto;
+  padding-top: .5rem;
+  margin-top: .8rem;
+}
+div.description, div.languages {
+  max-width: 100%;
+  padding: .2rem;
 }
 
 /**********************************************
