@@ -62,8 +62,7 @@ ul#brand-and-icon img {
 }
 
 ul#nav-links {
-  display: flex;
-  flex-direction: column;
+  display: none;
   width: 100%;
   justify-content: center;
 }
@@ -104,13 +103,18 @@ nav a, a:hover {
 /**********************************************
 IMAGES
 ***********************************************/
-div.image {
+li.logo2 {
+  display: none;
+}
+
+div.image-blurbs {
   width: 100%;
   text-align: center;
+  /*background-color: purple;*/
 }
 
 img#me {
-  max-width: 30%;
+  max-width: 100%;
   border-radius: 100%;
   margin-bottom: 15px;
   border: 2px solid black;
@@ -255,6 +259,11 @@ div.row {
   text-align: center;
 }
 
+div#me {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
 div.all-cards {
   display: flex;
   flex-direction: row;
@@ -360,3 +369,34 @@ div.box:nth-child(3) {
   background-color: turquoise;
   margin: 10px;
 }
+
+/**********************************************
+***********************************************
+***********************************************
+SCREENSIZES ABOVE 720px
+***********************************************
+***********************************************
+**********************************************/
+
+@media (min-width: 600px) {
+
+  ul#brand-and-icon {
+    display: none;
+  }
+
+  ul#nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  ul#nav-links li {
+    text-align: center;
+    border: none;
+  }
+
+  li.logo2 {
+    display: block;
+  }
+
+} /* ends @media */
