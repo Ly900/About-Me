@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
-html, body, div, header, nav, ul, li, section, img, h1, h2, p, a {
+html, body, div, header, nav, ul, li, section, img, h1, h2, p, a, input {
   margin: 0;
   border: 0;
   padding: 0;
@@ -443,6 +443,10 @@ div.box:nth-child(3) {
 
   #toggle:checked + div#nav-links {
     max-height:200px;
+  }
+
+  #toggle:checked + section.image {
+    margin-top:200px;
   }
 
   ul li.icon {
