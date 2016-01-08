@@ -30,19 +30,35 @@
 
 <body>
   <header>
-    <nav>
+    <nav id="whole-nav">
       <ul id="brand-and-icon">
-        <li><h1><a href="index.html" id="logo">Ly N.</a></h1></li>
-        <li id="menu-icon"><img src="assets/images/menu-icon.png" alt="menu icon"/></li>
+
+        <li style="background-color: pink" class="icon">
+          <h1>
+            <a href="index.html" id="logo">Ly N.</a>
+          </h1>
+        </li>
+
+        <li>
+          <label for="toggle" id="menu-icon">
+            <img src="assets/images/menu-icon.png" alt="menu icon"/>
+          </label>
+        </li>
+
       </ul>
 
       <!-- List below starts hidden -->
-      <ul id="nav-links">
-        <li class="logo2"><h1><a href="index.html">Ly N.</a></h1></li>
-        <li>About Me</li>
-        <li>Projects</li>
-        <li>Resume</li>
-      </ul>
+      <input type="checkbox" id="toggle"/>
+      <!-- <ul id="nav-links"> -->
+        <!-- <li>About Me</li>
+            <li>Projects</li>
+            <li>Resume</li> -->
+      <!-- </ul> -->
+      <div id="nav-links" style="background-color: gray">
+        <a>About Me</a>
+        <a>Projects</a>
+        <a class="resume">Resume</a>
+      </div>
     </nav>
 
     <!-- Profile image and blurb -->

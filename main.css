@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
-html, body, div, header, nav, ul, li, section, img, h1, h2, p {
+html, body, div, header, nav, ul, li, section, img, h1, h2, p, a {
   margin: 0;
   border: 0;
   padding: 0;
@@ -22,17 +22,18 @@ body {
 /**********************************************
 NAVIGATION and NAVIGATION LINKS
 ***********************************************/
+input[type=checkbox]{
+  display:none;
+}
+
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   font-size: 1rem;
   background-color: #FFE800;
   font-variant:small-caps;
   position: fixed;
-  width: 100%;
   z-index: 1;
+  background-color: green;
 }
 
 ul {
@@ -43,43 +44,28 @@ ul#brand-and-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
   border-bottom: 1px solid #F1DB00;
-}
-
-ul#brand-and-icon li:first-child {
-  margin-right: auto;
-  cursor: pointer;
-}
-
-ul#brand-and-icon li:last-child {
-  cursor: pointer;
+  background-color: cyan;
 }
 
 ul#brand-and-icon img {
   width: 1.8rem;
-  padding: .1rem;
 }
 
-ul#nav-links {
-  display: none;
-  width: 100%;
-  justify-content: center;
-}
-
-ul#nav-links li:first-child {
+/*ul#nav-links li:first-child {*/
   /*background-color:#FFF31B;*/
-}
+/*}*/
 
-ul#nav-links li {
-  padding: 5px;
+/*ul#nav-links li {*/
+  /*display: block;  added from Robin's code */
+  /*padding: 5px;
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
-  border-bottom: 1px solid #F1DB00;
+  border-bottom: 1px solid #F1DB00;*/
   /*border-top: 1px solid white;*/
   /*box-shadow: 1px 0px 1px black;*/
-}
+/*}*/
 
 ul#nav-links li:hover {
   background-color: #F2DD00;
@@ -103,9 +89,6 @@ nav a, a:hover {
 /**********************************************
 IMAGES
 ***********************************************/
-li.logo2 {
-  display: none;
-}
 
 div.image-blurbs {
   width: 100%;
@@ -144,6 +127,7 @@ h1 {
   margin: .5rem;
   font-weight: 500;
   letter-spacing: .2rem;
+  background-color: orange;
 }
 
 h1:hover {
@@ -372,31 +356,94 @@ div.box:nth-child(3) {
 
 /**********************************************
 ***********************************************
-***********************************************
-SCREENSIZES ABOVE 720px
-***********************************************
+SCREENSIZES ABOVE 600px
 ***********************************************
 **********************************************/
 
-@media (min-width: 600px) {
+@media (min-width: 601px) {
 
-  ul#brand-and-icon {
-    display: none;
-  }
-
-  ul#nav-links {
-    display: flex;
-    flex-direction: row;
+  nav#whole-nav {
+    display:flex;
+    display:-webkit-flex;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    justify-content: space-between;
+    /*-webkit-justify-content:space-between;*/
     align-items: center;
   }
 
-  ul#nav-links li {
+  nav a {
+    margin-right: 20px;
+  }
+
+  a.resume {
+    margin-right: auto;
+  }
+
+  /*ul#nav-links {*/
+    /*display: flex;
+    flex-direction: row;*/
+  /*}*/
+
+  /*ul#brand-and-icon {
+    display: none;
+  }*/
+
+  label#menu-icon {
+    /*display: none;*/
+  }
+
+  /*ul#nav-links li {
     text-align: center;
     border: none;
-  }
+  }*/
 
-  li.logo2 {
-    display: block;
-  }
+  /*ul#brand-and-icon {*/
+    /*max-width: 30%;*/
+    /*display: inline-block;*/
+  /*}*/
 
 } /* ends @media */
+
+
+/*************************************/
+/* WHEN THE SCREEN IS SMALL: < 601px */
+/*************************************/
+
+@media (max-width: 600px) {
+
+  nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  }
+
+  div#nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #toggle + ul#nav-links {
+    display:block;
+    width:100%;
+    overflow:hidden;
+    transition:max-height 0.2s;
+    -webkit-transition:max-height 0.2s;
+    max-height:0px;
+  }
+
+  #toggle:checked+ul#nav-links {
+    max-height:200px;
+  }
+
+  ul li.icon {
+    margin-right: auto;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+}
