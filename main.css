@@ -32,8 +32,12 @@ nav {
   background-color: #FFE800;
   font-variant:small-caps;
   position: fixed;
-  z-index: 1;
-  background-color: green;
+  /*z-index: 1;*/
+  /*background-color: green;*/
+}
+
+nav#whole-nav {
+  display: block; /* from Robin's code */
 }
 
 ul {
@@ -45,7 +49,7 @@ ul#brand-and-icon {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #F1DB00;
-  background-color: cyan;
+  /*background-color: cyan;*/
 }
 
 ul#brand-and-icon img {
@@ -120,7 +124,7 @@ h1 {
   margin: .5rem;
   font-weight: 500;
   letter-spacing: .2rem;
-  background-color: orange;
+  /*background-color: orange;*/
 }
 
 h1:hover {
@@ -347,11 +351,9 @@ div.box:nth-child(3) {
   margin: 10px;
 }
 
-/**********************************************
-***********************************************
-SCREENSIZES ABOVE 600px
-***********************************************
-**********************************************/
+/*************************************/
+/* WHEN THE SCREEN IS LARGE: > 600px */
+/*************************************/
 
 @media (min-width: 601px) {
 
@@ -360,9 +362,12 @@ SCREENSIZES ABOVE 600px
     display:-webkit-flex;
     flex-direction:row;
     -webkit-flex-direction:row;
-    justify-content: space-between;
     /*-webkit-justify-content:space-between;*/
     align-items: center;
+  }
+
+  div#nav-links a {
+    border: none;
   }
 
   nav a {
@@ -383,7 +388,7 @@ SCREENSIZES ABOVE 600px
   }*/
 
   label#menu-icon {
-    /*display: none;*/
+    display: none;
   }
 
   /*ul#nav-links li {
@@ -418,16 +423,25 @@ SCREENSIZES ABOVE 600px
     align-items: center;
   }
 
-  #toggle + ul#nav-links {
+  /*#toggle + ul#nav-links {
     display:block;
     width:100%;
     overflow:hidden;
     transition:max-height 0.2s;
     -webkit-transition:max-height 0.2s;
     max-height:0px;
+  }*/
+
+  #toggle + div#nav-links {
+    /*display:block;
+    width:100%;*/
+    overflow:hidden;
+    transition:max-height 0.2s;
+    -webkit-transition:max-height 0.2s;
+    max-height:0px;
   }
 
-  #toggle:checked+ul#nav-links {
+  #toggle:checked + div#nav-links {
     max-height:200px;
   }
 
