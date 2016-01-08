@@ -67,10 +67,6 @@ ul#nav-links {
   justify-content: center;
 }
 
-ul#nav-links li:first-child {
-  /*background-color:#FFF31B;*/
-}
-
 ul#nav-links li {
   padding: 5px;
   width: 100%;
