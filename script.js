@@ -9,15 +9,26 @@ $(document).ready(function(){
   // };
 
   // $("ul#nav-links").hide();
+  //
+  // $("li#menu-icon").on("click", navToggle);
+  //
+  // function moveMainImage(){
+  //   $("section.image").toggleClass("moved");
+  // };
+  //
+  // function navToggle(){
+  //   $("ul#nav-links").slideToggle("fast", moveMainImage);
+  // };
 
-  $("li#menu-icon").on("click", navToggle);
+  // var $input = $("input#toggle");
 
-  function moveMainImage(){
-    $("section.image").toggleClass("moved");
-  };
+  // if ("$input(:checked)") {
+    // $("section.image").addClass("scootDown");
+    // alert("hi")
+  // }
 
-  function navToggle(){
-    $("ul#nav-links").slideToggle("fast", moveMainImage);
-  };
+  $("input#toggle").on( "click", function() {
+    $("div.image-blurbs").toggleClass("scootDown");
+  });
 
 })
