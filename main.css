@@ -199,10 +199,6 @@ section#projects h5 {
 /**********************************************
 LINKS
 ***********************************************/
-a:link, a:active, a:visited {
-  color: #2E79B9;
-}
-
 a.section-link, p a {
   font-weight: 600;
 }
