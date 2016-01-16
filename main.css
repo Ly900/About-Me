@@ -43,8 +43,9 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
+
 /**********************************************
 NAVIGATION and NAVIGATION LINKS
 ***********************************************/
@@ -87,7 +88,6 @@ div#nav-links a {
   padding: 5px;
   width: 100%;
   height: 40px;
-  text-align: center;
   font-size: 1.2rem;
   border-bottom: 1px solid #F1DB00;
 }
@@ -222,6 +222,12 @@ section.image-blurbs {
   max-width: 100%;
   padding-top: 60px;
   background-color: #FFF13D;
+}
+
+.scrolled {
+  transition:max-height 0.1s;
+  -webkit-transition:max-height 0.1s;
+  max-height: 0;
 }
 
 section.moved {
@@ -479,8 +485,6 @@ div.box:nth-child(3) {
   }
 
   #toggle + div#nav-links {
-    /*display:block;
-    width:100%;*/
     overflow:hidden;
     transition:max-height 0.1s;
     -webkit-transition:max-height 0.1s;
