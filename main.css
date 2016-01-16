@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
-html, body, div, header, nav, ul, li, section, img, h1, h2, p, a, input {
+html, body, div, header, nav, ul, li, section, img, h1, h2, h3, h4, p, a, input {
   margin: 0;
   border: 0;
   padding: 0;
@@ -19,6 +19,32 @@ body {
   font-weight: 300;
 }
 
+blockquote:before {
+  color: black;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: black;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote {
+  border-left: 10px solid #FFEA00;
+  border-right: 10px solid #FFEA00;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 1.5em;
+}
 /**********************************************
 NAVIGATION and NAVIGATION LINKS
 ***********************************************/
@@ -88,14 +114,8 @@ nav a, a:hover {
 IMAGES
 ***********************************************/
 
-div.image-blurbs {
-  width: 100%;
-  text-align: center;
-  /*background-color: purple;*/
-}
-
 img#me {
-  max-width: 100%;
+  max-width: 200px;
   border-radius: 100%;
   margin-bottom: 15px;
   border: 2px solid black;
@@ -152,8 +172,9 @@ h3 {
 }
 
 /* Used for brand statement, which is hidden in mobile */
-h4 {
+h4.blurb {
   display: none;
+  /*border: 3px solid orange;*/
 }
 
 /* Used for subtitles */
@@ -197,7 +218,7 @@ section {
   text-align: center;
 }
 
-section.image {
+section.image-blurbs {
   max-width: 100%;
   padding-top: 60px;
   background-color: #FFF13D;
@@ -241,6 +262,22 @@ div.row {
   text-align: center;
 }
 
+
+div.image-blurbs {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /*border: 5px solid blue;*/
+}
+
+div.blurb {
+  max-width: 50%;
+  align-self: center;
+  display: none;
+}
+
 div.row.technologies {
   display: flex;
   flex-direction: column;
@@ -248,8 +285,9 @@ div.row.technologies {
 }
 
 div#me {
-  max-width: 30%;
+  max-width: 100%;
   margin: 0 auto;
+  /*border: 5px solid red;*/
 }
 
 div.all-cards {
@@ -393,28 +431,30 @@ div.box:nth-child(3) {
     margin-right: auto;
   }
 
-  /*ul#nav-links {*/
-    /*display: flex;
-    flex-direction: row;*/
-  /*}*/
+  div.blurb , blockquote, blockquote:before {
+    display: inline-block;
+  }
 
-  /*ul#brand-and-icon {
-    display: none;
-  }*/
+  div#me {
+    margin: 0;
+  }
+
+  h4.blurb {
+    display: inline-block;
+    font-weight: 500;
+  }
 
   label#menu-icon {
     display: none;
   }
 
-  /*ul#nav-links li {
-    text-align: center;
-    border: none;
-  }*/
+  img#me {
+    width: 150px;
+  }
 
-  /*ul#brand-and-icon {*/
-    /*max-width: 30%;*/
-    /*display: inline-block;*/
-  /*}*/
+  h3#blurb {
+  font-size: .8rem;
+  }
 
 } /* ends @media */
 
