@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  font-size: 1rem;
   letter-spacing: 1px;
   font-family: raleway, sans-serif;
   font-weight: 300;
@@ -90,6 +89,7 @@ div#nav-links a {
   height: 40px;
   font-size: 1.2rem;
   border-bottom: 1px solid #F1DB00;
+  color: black;
 }
 
 div#nav-links a:hover {
@@ -99,13 +99,13 @@ div#nav-links a:hover {
 }
 
 div#nav-links a:active {
-  background-color: #FFEF4F;
+  background-color: #FFF457;
   font-weight: 600;
   border: none;
   color: black;
 }
 
-nav a, a:hover {
+nav a, a:hover, a:active {
   text-decoration: none;
   color: black;
 }
@@ -129,7 +129,7 @@ img#resume {
   max-width: 33%;
 }
 
-img#memory-game {
+img.project {
   max-width: 100%;
   margin: .5rem 0;
 }
@@ -267,7 +267,6 @@ CONTAINERS AND DIVS
 div.row {
   text-align: center;
 }
-
 
 div.image-blurbs {
   width: 100%;

@@ -10,6 +10,7 @@ $(document).ready(function(){
 
   $("div#nav-links a").on("click", function() {
     $('#toggle').attr('checked', false);
+    $("div.image-blurbs").toggleClass("scootDown");
   })
 
 
