@@ -199,12 +199,13 @@ section#projects h5 {
 /**********************************************
 LINKS
 ***********************************************/
-a.section-link, p a {
-  font-weight: 600;
+a.section-link, p a, a {
+  font-weight: 500;
 }
 
-a.section-link:hover, p a:hover {
+a.section-link:hover, p a:hover, a:hover {
   color: #00BE9D;
+  font-weight: 700;
 }
 
 /**********************************************
