@@ -72,13 +72,11 @@ div#nav-links a:hover {
   font-weight: 600;
 }
 
-div#nav-links li:active {
+div#nav-links a:active {
   background-color: #FFEF4F;
-  /*background-color: #FFF13D;*/
-  /*background-color: #FBF366;*/
   font-weight: 600;
   border: none;
-  color: white;
+  color: black;
 }
 
 nav a, a:hover {
