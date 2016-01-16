@@ -11,7 +11,7 @@ $(document).ready(function(){
   // $("ul#nav-links").hide();
   //
   // $("li#menu-icon").on("click", navToggle);
-  // 
+  //
   // function moveMainImage(){
   //   $("section.image").toggleClass("moved");
   // };
@@ -19,5 +19,16 @@ $(document).ready(function(){
   // function navToggle(){
   //   $("ul#nav-links").slideToggle("fast", moveMainImage);
   // };
+
+  // var $input = $("input#toggle");
+
+  // if ("$input(:checked)") {
+    // $("section.image").addClass("scootDown");
+    // alert("hi")
+  // }
+
+  $("input#toggle").on( "click", function() {
+    $("div.image-blurbs").toggleClass("scootDown");
+  });
 
 })
