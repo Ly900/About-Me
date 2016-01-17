@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
-html, body, div, header, footer, nav, ul, li, section, img, h1, h2, h3, h4, p, a, input {
+html, body, div, header, footer, nav, ul, li, section, img, h1, h2, h3, h4, h5, p, a, input {
   margin: 0;
   border: 0;
   padding: 0;
@@ -178,12 +178,16 @@ h4.blurb {
 }
 
 /* Used for subtitles */
-h5, section#resume h5 {
+h5 {
   margin: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: .2rem;
   text-align: center;
+  max-width: 100%;
+}
+
+section#resume h5 {
   color: #00BD9D;
 }
 
