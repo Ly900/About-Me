@@ -188,13 +188,12 @@ h5 {
 }
 
 section#resume h5,
-section#about-me h5
-{
-  color: #00BD9D;
+section#about-me h5 {
+  /*color: #00BD9D;*/
 }
 
 section#projects h5 {
-  color: #FA8C3A;
+  /*color: #FA8C3A;*/
 }
 
 /* Used for project descriptions */
@@ -239,17 +238,19 @@ section.moved {
 
 section.section-info {
   margin: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 section#about-me,
 section#projects {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   border-bottom: 2px solid #F4F4F4;
 }
 
 p {
   margin-bottom: 1rem;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 footer {
@@ -442,6 +443,7 @@ div.box:nth-child(3) {
     max-width: 75%;
     margin: 0 auto;
     text-align: left;
+    line-height: 45px;
   }
 
   ul#technologies {
