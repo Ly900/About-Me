@@ -187,7 +187,9 @@ h5 {
   max-width: 100%;
 }
 
-section#resume h5 {
+section#resume h5,
+section#about-me h5
+{
   color: #00BD9D;
 }
 
@@ -410,10 +412,10 @@ div.box:nth-child(3) {
 }
 
 /*************************************/
-/* WHEN THE SCREEN IS LARGE: > 600px */
+/* WHEN THE SCREEN IS LARGE: > 650px */
 /*************************************/
 
-@media (min-width: 601px) {
+@media (min-width: 651px) {
 
   nav#whole-nav {
     display:flex;
@@ -479,10 +481,10 @@ div.box:nth-child(3) {
 
 
 /*************************************/
-/* WHEN THE SCREEN IS SMALL: < 601px */
+/* WHEN THE SCREEN IS SMALLER < 651px */
 /*************************************/
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   nav {
   display: flex;
