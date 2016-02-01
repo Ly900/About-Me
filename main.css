@@ -41,8 +41,15 @@ blockquote {
   border-right: 10px solid #FFEA00;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  /*quotes: "\201C""\201D""\2018""\2019";*/
   line-height: 1.7em;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+}
+
+blockquote:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /**********************************************
@@ -93,7 +100,7 @@ div#nav-links a {
 }
 
 div#nav-links a:hover {
-  background-color: #F2DD00;
+  /*background-color: #F2DD00;*/
   cursor: pointer;
   font-weight: 600;
 }
@@ -119,6 +126,11 @@ img#me {
   border-radius: 100%;
   margin-bottom: 15px;
   border: 2px solid black;
+  opacity: .9;
+}
+
+img#me:hover {
+  opacity: 1;
 }
 
 img#heart {
@@ -254,11 +266,10 @@ p {
 }
 
 footer {
-  max-width: 100%;
+  width: 100%;
   background-color: #FFE800;
   font-size: .6rem;
-  width: 100%;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 /**********************************************
@@ -423,16 +434,16 @@ div.box:nth-child(3) {
     display:-webkit-flex;
     flex-direction:row;
     -webkit-flex-direction:row;
-    /*-webkit-justify-content:space-between;*/
     align-items: center;
   }
 
-  ul#brand-and-icon {
+  ul#brand-and-icon,
+  div#nav-links a {
     border: none;
   }
 
-  div#nav-links a {
-    border: none;
+  div#nav-links a:hover {
+    color: #00BE9D;
   }
 
   nav a {
@@ -501,6 +512,14 @@ div.box:nth-child(3) {
     align-items: center;
   }
 
+  div#nav-links a:hover {
+    background-color: #F2DD00;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
   #toggle + div#nav-links {
     overflow:hidden;
     transition:max-height 0.1s;
@@ -518,10 +537,6 @@ div.box:nth-child(3) {
 
   ul li.icon {
     margin-right: auto;
-  }
-
-  nav a {
-    text-align: center;
   }
 
 }
