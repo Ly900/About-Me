@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900);
+
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
 @mixin prefix($property, $value, $prefixes: ()) {
@@ -22,47 +23,39 @@ MAIN STYLES - MOBILE
 ***********************************************/
 
 html {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 body {
-  letter-spacing: 1px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-}
-
-blockquote:before {
-  color: black;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-blockquote:after {
-  color: black;
-  content: close-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+  font: {
+    size: 100%;
+    family: "Raleway", sans-serif;
+    weight: 200;
+  }
+  letter-spacing: .1em;
 }
 
 blockquote {
-  border-left: 10px solid #FFEA00;
-  border-right: 10px solid #FFEA00;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  /*quotes: "\201C""\201D""\2018""\2019";*/
-  line-height: 1.7em;
-  -webkit-transition: 2s ease;
+  border-left: 1em solid #FFEA00;
+  border-right: 1em solid #FFEA00;
+  margin: 0em 2em;
+  line-height: 1.5em;
   transition: 2s ease;
-}
-
-blockquote:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  &:hover {
+    @include prefix(transform, scale(1.2), webkit ms)
+  }
+  &:before, &:after {
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  &:before {
+    content: open-quote;
+  }
+  &:after {
+    content: close-quote;
+  }
 }
 
 /**********************************************
@@ -72,36 +65,34 @@ input[type=checkbox]{
   display:none;
 }
 
-nav {
+nav#whole-nav {
+  display: block;
   width: 100%;
-  font-size: 1rem;
   background-color: #FFE800;
   font-variant:small-caps;
   position: fixed;
-  /*z-index: 1;*/
-  /*background-color: green;*/
-}
-
-nav#whole-nav {
-  display: block; /* from Robin's code */
-}
-
-ul {
-  list-style: none;
 }
 
 ul#brand-and-icon {
-  display: flex;
+  list-style: none;
+  @include prefix(display, flex, webkit ms);
+  display: -webkit-box;
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #F1DB00;
   height: 40px;
-  /*background-color: cyan;*/
+  img {
+    width: 1.8rem;
+  }
 }
 
-ul#brand-and-icon img {
-  width: 1.8rem;
-}
+/* STOPPED HERE WITH CONVERSION */
+/* STOPPED HERE WITH CONVERSION */
+/* STOPPED HERE WITH CONVERSION */
+/* STOPPED HERE WITH CONVERSION */
+/* STOPPED HERE WITH CONVERSION */
+/* STOPPED HERE WITH CONVERSION */
+
 
 div#nav-links a {
   padding: 5px;
