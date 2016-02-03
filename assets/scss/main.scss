@@ -1,12 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,900);
 @import url(https://fonts.googleapis.com/css?family=Bonbon);
 
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
 html, body, div, header, footer, nav, ul, li, section, img, h1, h2, h3, h4, h5, p, a, input {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  @include prefix(box-sizing, border-box, webkit moz);
 }
+
+/**********************************************
+MAIN STYLES - MOBILE
+***********************************************/
 
 html {
   font-size: 20px;
@@ -355,7 +368,7 @@ div.description-container {
 div.languages {
   margin-bottom: auto;
   padding-top: .5rem;
-  margin-top: .8rem;git st
+  margin-top: .8rem;
 }
 
 div.description, div.languages {
