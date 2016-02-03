@@ -14,7 +14,7 @@ html {
 
 body {
   letter-spacing: 1px;
-  font-family: raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
 
@@ -126,11 +126,9 @@ img#me {
   border-radius: 100%;
   margin-bottom: 15px;
   border: 2px solid black;
-  opacity: .9;
 }
 
 img#me:hover {
-  opacity: 1;
 }
 
 img#heart {
@@ -315,6 +313,7 @@ div#me {
 div.all-cards {
   display: flex;
   flex-direction: row;
+
   flex-wrap: wrap;
   justify-content: space-around;
 }
