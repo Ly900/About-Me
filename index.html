@@ -23,6 +23,7 @@
 </head>
 
 <body>
+  <div class="container-fluid">
   <header>
 
     <nav>
@@ -52,12 +53,12 @@
     </nav>
 
     <!-- Profile image and blurb -->
-    <section class="image-blurbs">
-      <div class="image-blurbs">
+    <div class="image-blurbs">
+      <div class="image-blurbs-scoot">
 
         <div class="container">
           <img src="assets/images/headshot.jpg" id="me"/>
-          <h2 id="blurb">Full-stack developer. Design lover.</h2>
+          <h2 id="blurb">Web developer. Design lover.</h2>
         </div>
         <div class="blurb">
           <h3 class="blurb">
@@ -68,46 +69,29 @@
         </div>
 
       </div>
-    </section>
+    </div>
 
   </header>
 
   <!-- *********** ABOUT ME SECTION *********** -->
 
-  <section class="section-info" id="about-me">
+  <section id="about-me">
     <a name="about-me"></a>
-    <h5>About Me</h5>
+    <h4>About Me</h4>
     <p>
-      My name is Ly and I am a graduate of
-      <a href="https://generalassemb.ly/education/visual-design?&gclid=CjwKEAiA8K20BRDetNv3p6DNhXwSJADSwa3tiJIZX0w0LgQlhE5wg_7mEJjWAXDKSBoTGqY9ieU2FhoCeXLw_wcB" class="section-link">
-        General Assembly's</a> Web Development Immersive Program in Washington, DC.
+      I'm Ly and I'm a <strong>developer.</strong>
     </p>
-    <p>
-      I value hard work, dedication, and persistence. I enjoy solving problems and love to learn new skills. My heart is with front-end development. I love colors and game-like apps and designs.
+    <p class="lead">
+      I value learning, creativity, and persistence.
     </p>
-
-    <<!-- *********** FAVORITE TECHNOLOGIES *********** -->
-    <p>
-      I <img src="assets/images/heart.png" alt="heart" id="heart"/> to do work that involves:
-    </p>
-
-      <div class="row technologies">
-        <ul id="technologies">
-          <li class="label label-primary">HTML 5/CSS 3</li>
-          <li class="label label-success">Javascript</li>
-          <li class="label label-info">JQuery</li>
-          <li class="label label-warning">Angular</li>
-        </ul>
-      </div>
-
   </section>
 
-
-  <!-- PROJECTS -->
+  <!-- *********** PROJECTS *********** -->
+  <!-- A name below used for jump anchor -->
   <a name="projects"></a>
-  <section class="section-info" id="projects">
-    <h5>Projects</h5>
-    <p>Check out some of my projects below:</p>
+  <section id="projects">
+    <h4>Projects</h4>
+    <p class="lead">Check out some of my projects below:</p>
 
       <div class="all-cards">
 
@@ -115,14 +99,14 @@
           <div class="card-wrapper">
 
             <div class="title">
-              <h2>Memory Game</h2>
+              <h5>Memory Game</h5>
                 <a href="https://github.com/Ly900/Project-1-Memory-game">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>GitHub | </strong>
                 </span>
                 </a>
                 <a href="http://ly900.github.io/Project-1-Memory-game/">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>Deployed</strong>
                 </span>
                 </a>
@@ -135,7 +119,7 @@
             <div class="description-container project-small text-left">
               <div class="description">
                 <strong>Description:</strong>
-                <p class="project-small">
+                <p class="small-font">
                   This was my very first project at GA! This is a simple Memory Game that involves matching cards. Matched cards stay facing up and unmatched cards flip back over. A counter counts the number of clicks it took a player to win the game.
                 </p>
               </div>
@@ -154,13 +138,13 @@
           <div class="card-wrapper">
 
             <div class="title">
-              <h2>TeacherFAMConnect</h2>
+              <h5>TeacherFAMConnect</h5>
                 <a href="https://github.com/Ly900/project2">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>GitHub | </strong></span>
                 </a>
                 <a href="https://teacher-fam-connect.herokuapp.com">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>Deployed</strong>
                 </span>
                 </a>
@@ -173,7 +157,7 @@
             <div class="description-container project-small text-left">
               <div class="description">
                 <strong>Description:</strong>
-                <p class="project-small">
+                <p class="small-font">
                   TeacherFAMConnect helps teachers manage their students' address book entries and communication logs with families.
                 </p>
               </div>
@@ -196,13 +180,13 @@
           <div class="card-wrapper">
 
             <div class="title">
-              <h2>TechWiz Me!</h2>
+              <h5>TechWiz Me!</h5>
                 <a href="https://github.com/Ly900/techwizme">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>GitHub |  </strong></span>
                 </a>
                 <a href="https://techwizme.herokuapp.com">
-                <span class="project-small">
+                <span class="small-font">
                   <strong>Deployed  </strong></span>
                 </a>
             </div>
@@ -214,7 +198,7 @@
             <div class="description-container project-small text-left">
               <div class="description">
                 <strong>Description:</strong>
-                <p class="project-small">
+                <p class="small-font">
                   TechWiz Me! is a place where developers can study and/or share common technical interview questions. This was my first MEAN stack app.
               </div>
               <div class="languages">
@@ -239,8 +223,8 @@
 
   <!-- Resume Section -->
   <a name="resume"></a>
-  <section class="section-info" id="resume">
-    <h5>Resume/Contact</h5>
+  <section id="resume">
+    <h4>Resume/Contact</h4>
     <a href="assets/resume.pdf"><img src="assets/images/resume.gif" alt="Picture of Resume" id="resume"/></a>
     <p>
       <ul>
@@ -256,5 +240,6 @@
     Copyright &copy; 2016 | Ly Nguyen | All Rights Reserved
   <!-- </p> -->
 </footer>
+</div> <!-- Ends div class container fluid -->
 </body>
 </html>

@@ -37,6 +37,9 @@ $navBorderColor: darken($mainGoldColor, 3%);
 $navBarHeight: 2em;
 $navBGColorHover: $navBorderColor;
 $navBGColorActive: lighten($mainGoldColor, 20%);
+$blurbBGcolor: lighten($mainGoldColor, 15%);
+$grayBorderColor: #F4F4F4;
+
 html {
   font-size: 20px;
 }
@@ -46,7 +49,7 @@ body {
     family: "Raleway", sans-serif;
     weight: 300;
   }
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
 }
 blockquote {
   border-left: 1em solid #FFEA00;
@@ -114,7 +117,7 @@ div#nav-links a:focus {
   padding: 0.25em;
   width: 100%;
   height: $navBarHeight;
-  font-size: 1.5em;
+  font-size: 1.3em;
   border-bottom: 1px solid $navBorderColor;
   text-decoration: none;
   color: black;
@@ -141,7 +144,6 @@ img#me {
   border: 2px solid black;
   @include prefix(border-radius, 100%, webkit moz);
 }
-img#me:hover {}
 /**********************************************
 IMAGES - BODY
 ***********************************************/
@@ -156,9 +158,14 @@ img {
     max-width: 100%;
     margin: 0.5em 0;
   }
+  &#tech {
+    width: 75%;
+    max-width: 250px;
+    margin: 1em;
+  }
 }
 /**********************************************
-HEADINGS
+HEADINGS + REGULAR FONT
 ***********************************************/
 /* Used for brand logo */
 h1 {
@@ -178,83 +185,60 @@ h1 {
 /* Used for short blurb under profile picture */
 h2 {
   font: {
-    size: 1.2em;
+    size: 1em;
     weight: 500;
   }
   max-width: 60%;
   margin: 0 auto;
-  padding-bottom: 1rem;
+  padding-bottom: 1em;
 }
 /* Used for brand statement, which is hidden in mobile */
 h3 {
   display: none;
 }
-/* Used for section titles */
-h5 {
-  margin: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
+/* Used for section subtitles */
+h4 {
+  font: {
+    family: "Chewy", cursive;
+    size: 2.5em;
+    weight: 600;
+  }
+  margin: {
+    top: .5em;
+    bottom: .5em;
+  }
+  letter-spacing: .1em;
   text-align: center;
   max-width: 100%;
 }
-section#resume h5,
-section#about-me h5 {
-  /*color: #00BD9D;*/
+/* Used for regular paragraph fonts */
+section p {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 1em;
 }
-section#projects h5 {
-  /*color: #FA8C3A;*/
-}
-/* Used for project descriptions */
-.project-small {
-  font-size: 0.7rem;
+
+.small-font {
+  font-size: 0.8em;
 }
 /**********************************************
-LINKS
+PIC AND BLURBS
 ***********************************************/
-a.section-link,
-p a,
-a {
-  font-weight: 500;
-}
-a.section-link:hover,
-p a:hover,
-a:hover {
-  color: #00BE9D;
-  font-weight: 700;
+div.image-blurbs-scoot {
+  width: 100%;
+  padding-top: 3em;
+  background-color: $blurbBGcolor;
 }
 /**********************************************
 SECTIONS AND PARAGRAPHS
 ***********************************************/
 section {
+  width: 100%;
+  // border: 1px solid red;
+  padding: 1em;
   text-align: center;
-}
-section.image-blurbs {
-  max-width: 100%;
-  padding-top: 60px;
-  background-color: #FFF13D;
-}
-.scrolled {
-  transition: max-height 0.1s;
-  -webkit-transition: max-height 0.1s;
-  max-height: 0;
-}
-section.moved {
-  padding-top: 170px;
-}
-section.section-info {
-  margin: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-section#about-me,
-section#projects {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #F4F4F4;
-}
-p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  border-bottom: 2px solid $grayBorderColor;
 }
 footer {
   width: 100%;
@@ -263,38 +247,39 @@ footer {
   padding: 0.5rem;
 }
 /**********************************************
+PROJECTS
+***********************************************/
+/* Used for project descriptions */
+h5 {
+  font-size: 1.2em;
+}
+
+/**********************************************
 CONTAINERS AND DIVS
 ***********************************************/
 div.row {
   text-align: center;
 }
-div.image-blurbs {
+div.image-blurbs-scoot {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /*border: 5px solid blue;*/
 }
 div.blurb {
   max-width: 50%;
   align-self: center;
   display: none;
 }
-div.tech-container {
-  max-width: 100%;
-}
-div.row.technologies {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  /*align-items: center;*/
-  max-width: 100%;
+div.container-fluid {
+  padding: 0;
+  max-width: 1500px;
 }
 div.container {
   max-width: 100%;
   margin: 0 auto;
-  /*border: 5px solid red;*/
+  text-align: center;
 }
 div.all-cards {
   display: flex;
@@ -345,32 +330,7 @@ div.languages {
 /**********************************************
 LISTS
 ***********************************************/
-ul#technologies {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
-}
-ul#technologies li {
-  font-weight: 200;
-  color: white;
-  width: 120px;
-  margin: 0.1rem;
-  text-align: center;
-}
-div.languages li {
-  list-style: square;
-  list-style-position: inside;
-}
-/**********************************************
-FONT SIZES
-***********************************************/
-ul#technologies li {
-  font-size: 0.8rem;
-  list-style-type: square;
-  list-style-position: inside;
-  text-align: center;
-}
+
 /**********************************************
 COLOR SCHEME
 ***********************************************/
@@ -419,9 +379,6 @@ div.box:nth-child(3) {
     text-align: left;
     line-height: 45px;
   }
-  ul#technologies {
-    flex-direction: row;
-  }
   a.resume {
     margin-right: auto;
   }
@@ -433,7 +390,7 @@ div.box:nth-child(3) {
   div.container {
     margin: 0;
   }
-  h4.blurb {
+  h3 {
     display: inline-block;
     font-weight: 500;
   }
@@ -443,8 +400,8 @@ div.box:nth-child(3) {
   img#me {
     width: 150px;
   }
-  h3#blurb {
-    font-size: 0.8rem;
+  h2#blurb {
+    font-size: 1.5em;
   }
 }
 /* ends @media */
@@ -476,7 +433,7 @@ div.box:nth-child(3) {
     max-height: 200px;
   }
   .scootDown {
-    margin-top: $navBarHeight * 4.2;
+    margin-top: $navBarHeight * 4;
   }
   ul li.icon {
     margin-right: auto;
