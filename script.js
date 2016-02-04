@@ -1,16 +1,25 @@
 $(document).ready(function(){
 
   var toggleNav = function() {
-    $("input#toggle").on( "click", function() {
-      $("div.image-blurbs-scoot").toggleClass("scootDown");
-    });
-  };
+    // console.log($("input#toggle").is(":checked"));
+    if ($(window).scrollTop() < 20 & $("input#toggle").is(":checked")) {
+      $("div.scoot").addClass("scootDown");
+    } else if ($(window).scrollTop() < 20 & !$("input#toggle").is(":checked")) {
+      $("div.scoot").removeClass("scootDown");
+    } else if ($(window).scrollTop() > 20 & !$("input#toggle").is(":checked")) {
+      $("div.scoot").removeClass("scootDown");
+    };
+  }; // ends toggleNav function
 
-  toggleNav();
+  $("input#toggle").on("click", toggleNav);
 
-  $("div#nav-links a").on("click", function() {
+
+ //& $("input#toggle").is(":checked")
+
+
+  $("div#nav-links a").on("click", function(event) {
     $('#toggle').attr('checked', false);
-    $("div.image-blurbs-scoot").toggleClass("scootDown");
+    // $("div.scoot").toggleClass("scootDown");
   })
 
 

@@ -34,7 +34,7 @@ MAIN STYLES - MOBILE
 ***********************************************/
 $mainGoldColor: #FFE800;
 $navBorderColor: darken($mainGoldColor, 3%);
-$navBarHeight: 2em;
+$navBarHeight: 2.2em;
 $navBGColorHover: $navBorderColor;
 $navBGColorActive: lighten($mainGoldColor, 20%);
 $blurbBGcolor: lighten($mainGoldColor, 15%);
@@ -84,10 +84,14 @@ blockquote {
 NAVIGATION and NAVIGATION LINKS
 ***********************************************/
 input[type=checkbox] {
-  display: none;
+  // display: none;
 }
 nav {
-  display: block;
+  @include prefix(display, flex, webkit ms);
+  @include prefix(display, flexbox, ms);
+  @include prefix(display, box, webkit);
+  @include prefix(flex-direction, column, webkit);
+  @include prefix(justify-content, center, webkit);
   width: 100%;
   background-color: $mainGoldColor;
   font-variant: small-caps;
@@ -112,44 +116,44 @@ nav {
       width: 1.8em;
     }
   }
-}
-/*******************************************
-STOPPED HERE WITH CONVERSION
-********************************************/
-div#nav-links a,
-div#nav-links a:hover,
-div#nav-links a:active,
-div#nav-links a:focus {
-  padding: 0.25em;
-  width: 100%;
-  height: $navBarHeight;
-  font-size: 1.3em;
-  border-bottom: 1px solid $navBorderColor;
-  text-decoration: none;
-  color: black;
-}
-div#nav-links a {
-  &:hover {
-    cursor: pointer;
-    font-weight: 500;
-    background-color: $navBGColorHover;
-    letter-spacing: 0.2em;
-  }
-  &:active {
-    background-color: $navBGColorActive;
-    border: none;
-    letter-spacing: 0;
-  }
-}
+  div#nav-links {
+    @include prefix(display, flex, webkit ms);
+    @include prefix(display, flexbox, ms);
+    @include prefix(display, box, webkit);
+    @include prefix(flex-direction, column, webkit);
+    @include prefix(align-items, center, webkit);
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+     padding: 0.25em;
+     width: 100%;
+     height: $navBarHeight;
+     font-size: 1.3em;
+     border-bottom: .05em solid $navBorderColor;
+     text-decoration: none;
+     color: black;
+     text-align: center;
+   }
+   a {
+     &:hover {
+       cursor: pointer;
+       font-weight: 500;
+       background-color: $navBGColorHover;
+       letter-spacing: 0.2em;
+     }
+     &:active {
+       background-color: $navBGColorActive;
+       border: none;
+       letter-spacing: 0;
+     }
+    }
+  } /* Ends div nav links */
+} /* Ends NAV element */
 /**********************************************
 IMAGES - NAV
 ***********************************************/
-img#me {
-  max-width: 50%;
-  margin-bottom: 15px;
-  border: 2px solid black;
-  @include prefix(border-radius, 100%, webkit moz);
-}
+
 /**********************************************
 IMAGES - BODY
 ***********************************************/
@@ -232,6 +236,15 @@ section p {
 /**********************************************
 PIC AND BLURBS
 ***********************************************/
+div.image-blurbs {
+  text-align: center;
+  img#me {
+    max-width: 50%;
+    margin-bottom: 1.2em;
+    border: 2px solid black;
+    @include prefix(border-radius, 100%, webkit moz);
+  }
+}
 div.image-blurbs-scoot {
   width: 100%;
   padding-top: 3em;
@@ -356,7 +369,6 @@ div.container-fluid {
 }
 div.container {
   max-width: 100%;
-  margin: 0 auto;
 }
 /**********************************************
 RESUME & CONTACT
@@ -436,41 +448,24 @@ footer {
     align-self: center;
     display: none;
   }
-
-
 }
 /* ends @media */
-/*************************************/
-/* WHEN THE SCREEN IS SMALLER < 651px */
-/*************************************/
-@media (max-width: 650px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
-  }
-  div#nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  nav a {
-    text-align: center;
-  }
+/*************************************
+HAMBURER MENU CLICK FUNCTIONALITY
+*************************************/
   #toggle + div#nav-links {
     overflow: hidden;
-    transition: max-height 0.1s;
-    -webkit-transition: max-height 0.1s;
+    transition: max-height .1s ease;
+    -webkit-transition: max-height .1s ease;
     max-height: 0;
   }
   #toggle:checked + div#nav-links {
-    max-height: 200px;
+    max-height: $navBarHeight * 4;
   }
   .scootDown {
     margin-top: $navBarHeight * 4;
+    @include prefix(transition, .1s ease, webkit)
   }
   ul li.icon {
     margin-right: auto;
   }
-}
