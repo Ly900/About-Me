@@ -367,9 +367,6 @@ div.container-fluid {
   padding: 0;
   max-width: 1500px;
 }
-div.container {
-  max-width: 100%;
-}
 /**********************************************
 RESUME & CONTACT
 ***********************************************/
@@ -455,8 +452,7 @@ HAMBURER MENU CLICK FUNCTIONALITY
 *************************************/
   #toggle + div#nav-links {
     overflow: hidden;
-    transition: max-height .1s ease;
-    -webkit-transition: max-height .1s ease;
+    @include prefix(transition, max-height .2s ease, webkit moz o);
     max-height: 0;
   }
   #toggle:checked + div#nav-links {
@@ -464,8 +460,11 @@ HAMBURER MENU CLICK FUNCTIONALITY
   }
   .scootDown {
     margin-top: $navBarHeight * 4;
-    @include prefix(transition, .1s ease, webkit)
   }
   ul li.icon {
     margin-right: auto;
+  }
+  div.container {
+    max-width: 100%;
+    @include prefix(transition, all .2s ease, webkit moz o)
   }

@@ -1,18 +1,19 @@
 $(document).ready(function(){
 
   var toggleNav = function() {
-    // console.log($("input#toggle").is(":checked"));
-    if ($(window).scrollTop() < 20 & $("input#toggle").is(":checked")) {
-      $("div.scoot").addClass("scootDown");
-    } else if ($(window).scrollTop() < 20 & !$("input#toggle").is(":checked")) {
-      $("div.scoot").removeClass("scootDown");
-    } else if ($(window).scrollTop() > 20 & !$("input#toggle").is(":checked")) {
-      $("div.scoot").removeClass("scootDown");
+    var scrollTop = $(window).scrollTop();
+    var inputChecked = $("input#toggle").is(":checked");
+    var $divScoot = $("div.scoot");
+    if (scrollTop < 20 & inputChecked) {
+      $divScoot.addClass("scootDown");
+    } else if (scrollTop < 20 & !inputChecked) {
+      $divScoot.removeClass("scootDown");
+    } else if (scrollTop > 20 & !inputChecked) {
+      $divScoot.removeClass("scootDown");
     };
   }; // ends toggleNav function
 
   $("input#toggle").on("click", toggleNav);
-
 
  //& $("input#toggle").is(":checked")
 
