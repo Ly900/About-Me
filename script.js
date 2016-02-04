@@ -15,12 +15,9 @@ $(document).ready(function(){
 
   $("input#toggle").on("click", toggleNav);
 
- //& $("input#toggle").is(":checked")
-
-
   $("div#nav-links a").on("click", function(event) {
     $('#toggle').attr('checked', false);
-    // $("div.scoot").toggleClass("scootDown");
+    $("div.scoot").removeClass("scootDown");
   })
 
 

@@ -83,9 +83,6 @@ blockquote {
 /**********************************************
 NAVIGATION and NAVIGATION LINKS
 ***********************************************/
-input[type=checkbox] {
-  // display: none;
-}
 nav {
   @include prefix(display, flex, webkit ms);
   @include prefix(display, flexbox, ms);
@@ -450,6 +447,9 @@ footer {
 /*************************************
 HAMBURER MENU CLICK FUNCTIONALITY
 *************************************/
+input[type=checkbox] {
+  display: none;
+}
   #toggle + div#nav-links {
     overflow: hidden;
     @include prefix(transition, max-height .2s ease, webkit moz o);
