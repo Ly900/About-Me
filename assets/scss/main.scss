@@ -39,6 +39,9 @@ $navBGColorHover: $navBorderColor;
 $navBGColorActive: lighten($mainGoldColor, 20%);
 $blurbBGcolor: lighten($mainGoldColor, 15%);
 $grayBorderColor: #F4F4F4;
+$linkColor: #4083BD;
+$linkHoverColor: #00BE9D;
+$blueColor: #00CFFF;
 
 html {
   font-size: 20px;
@@ -51,9 +54,12 @@ body {
   }
   letter-spacing: .1em;
 }
+ul {
+  list-style-position: inside;
+}
 blockquote {
-  border-left: 1em solid #FFEA00;
-  border-right: 1em solid #FFEA00;
+  border-left: 1em solid darken($mainGoldColor, 2%);
+  border-right: 1em solid darken($mainGoldColor, 2%);
   margin: 0 2em;
   line-height: 1.5em;
   @include prefix(transition, 1s ease, webkit moz o);
@@ -154,10 +160,6 @@ img {
   &#resume {
     max-width: 33%;
   }
-  &.project-thumbnail {
-    max-width: 100%;
-    margin: 0.5em 0;
-  }
   &#tech {
     width: 75%;
     max-width: 250px;
@@ -176,10 +178,15 @@ h1 {
   }
   padding: .2em;
   letter-spacing: .2em;
-  &:hover {
-    font-weight: bolder;
-    cursor: pointer;
-    letter-spacing: 0.3em;
+  a,
+  a:visited,
+  a:focus {
+    color: black;
+    &:hover {
+      font-weight: bolder;
+      cursor: pointer;
+      letter-spacing: 0.3em;
+    }
   }
 }
 /* Used for short blurb under profile picture */
@@ -240,38 +247,109 @@ section {
   text-align: center;
   border-bottom: 2px solid $grayBorderColor;
 }
-footer {
-  width: 100%;
-  background-color: #FFE800;
-  font-size: 0.6rem;
-  padding: 0.5rem;
+/**********************************************
+ALL LINKS
+***********************************************/
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+a,
+a:hover,
+a:visited {
+  color: #4FB3C0;
 }
 /**********************************************
 PROJECTS
 ***********************************************/
 /* Used for project descriptions */
-h5 {
-  font-size: 1.2em;
+div.all-cards {
+  @include prefix(display, flex, webkit ms);
+  @include prefix(display, flexbox, ms);
+  @include prefix(display, box, webkit);
+  @include prefix(flex-direction, row, webkit);
+  @include prefix(flex-wrap, wrap, moz webkit);
+  @include prefix(justify-content, space-around, moz webkit);
 }
-
+div.card-wrapper {
+  max-width: 29%;
+  margin: 2em 2%;
+  min-width: 250px;
+  box-shadow: .1em .1em 10px gray;
+  @include prefix(display, flex, webkit ms);
+  @include prefix(display, flexbox, ms);
+  @include prefix(display, box, webkit);
+  @include prefix(flex-direction, column, webkit);
+  @include prefix(justify-content, stretch, moz webkit);
+  // align-items: stretch;
+  // align-content: stretch;
+  h5 {
+    font: {
+      size: 100%;
+      family: "Chewy", cursive;
+    }
+    color: black;
+    width: 100%;
+    letter-spacing: .2em;
+  }
+  a {
+    color: #A24604;
+    &:hover {
+      color: lighten(#A24604, 15%);
+    }
+  }
+  div.title {
+    padding: .5em;
+    width: 100%;
+    background-color: lighten($mainGoldColor, 2%);
+  }
+  span.sites {
+    font-size: .7em;
+  }
+  div.project-image {
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    img {
+      min-height: 150px;
+      width: 100%;
+    }
+  }
+  div.description-container {
+    padding: .2em;
+    max-width: 100%;
+    font-size: .7em;
+    @include prefix(display, flex, webkit ms);
+    @include prefix(display, flexbox, ms);
+    @include prefix(display, box, webkit);
+    @include prefix(flex-direction, column-reverse, webkit);
+    @include prefix(align-content, space-around, webkit);
+    @include prefix(align-items, stretch, webkit);
+    flex-grow: 2;
+    div.languages {
+      text-align: left;
+      font-size: .7em;
+      margin-bottom: auto;
+      padding: 1em;
+      margin-top: 0.8em;
+    }
+    div.description {
+      max-width: 100%;
+      padding: 1em;
+      p {
+        text-align: justify;
+        font-size: .8em;
+      }
+    }
+  }
+} /* Ends div card wrapper */
 /**********************************************
 CONTAINERS AND DIVS
 ***********************************************/
-div.row {
-  text-align: center;
-}
-div.image-blurbs {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-div.blurb {
-  max-width: 50%;
-  align-self: center;
-  display: none;
-}
 div.container-fluid {
   padding: 0;
   max-width: 1500px;
@@ -279,78 +357,21 @@ div.container-fluid {
 div.container {
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
 }
-div.all-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/**********************************************
+RESUME & CONTACT
+***********************************************/
+ul {
+  font-size: .8em;
 }
-div.project-image {
-  text-align: center;
+/**********************************************
+FOOTER
+***********************************************/
+footer {
   width: 100%;
-  height: 150px;
-  overflow: hidden;
-}
-div.project-image img {
-  height: 150px;
-}
-div.card-wrapper {
-  max-width: 30%;
-  min-width: 250px;
-  padding: 1rem;
-  margin: 1rem;
-  border: 1px solid #CBC9C9;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-  align-content: stretch;
-}
-div.description-container {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-contents: space-around;
-  align-items: stretch;
-  flex-grow: 2;
-  /*margin-top: .2rem;*/
-}
-div.languages {
-  margin-bottom: auto;
-  padding-top: 0.5rem;
-  margin-top: 0.8rem;
-}
-div.description,
-div.languages {
-  max-width: 100%;
-  padding: 0.2rem;
-}
-/**********************************************
-LISTS
-***********************************************/
-
-/**********************************************
-COLOR SCHEME
-***********************************************/
-div.box:nth-child(1) {
-  width: 50px;
-  height: 50px;
-  background-color: HSL(24, 92%, 62%);
-  margin: 10px;
-}
-div.box:nth-child(2) {
-  width: 50px;
-  height: 50px;
-  background-color: HSL(53, 100%, 50%);
-  margin: 10px;
-}
-div.box:nth-child(3) {
-  width: 50px;
-  height: 50px;
-  background-color: turquoise;
-  margin: 10px;
+  background-color: #FFE800;
+  font-size: 0.6em;
+  padding: 0.5em;
 }
 /*************************************/
 /* WHEN THE SCREEN IS LARGE: > 650px */
@@ -368,7 +389,7 @@ div.box:nth-child(3) {
     border: none;
   }
   div#nav-links a:hover {
-    color: #00BE9D;
+    color: $linkHoverColor;
   }
   nav a {
     margin-right: 20px;
@@ -403,6 +424,20 @@ div.box:nth-child(3) {
   h2#blurb {
     font-size: 1.5em;
   }
+  div.image-blurbs {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  div.blurb {
+    max-width: 50%;
+    align-self: center;
+    display: none;
+  }
+
+
 }
 /* ends @media */
 /*************************************/
