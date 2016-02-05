@@ -221,9 +221,13 @@ h4 {
     top: .5em;
     bottom: .5em;
   }
+  display: inline-block;
   letter-spacing: .1em;
   text-align: center;
   max-width: 100%;
+  &:hover {
+    color: $mainBlueColor;
+  }
 }
 /* Used for regular paragraph fonts */
 section p {
@@ -382,8 +386,9 @@ div.card-wrapper {
       max-width: 100%;
       padding: 1em;
       p {
-        text-align: justify;
+        text-align: left;
         font-size: 1em;
+        margin-top: .5em;
       }
     }
   }
