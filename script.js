@@ -27,8 +27,36 @@ $(document).ready(function(){
 
   $("input#toggle").on("click", toggleNav);
 
-
-
+  var makeSkillBubbles = {
+    skills:
+    [
+    "HTML5",
+    "CSS3",
+    "SASS",
+    "Bootstrap",
+    "Javascript",
+    "JQuery",
+    "Ajax",
+    "Angular",
+    "Git",
+    "Github",
+    "Ruby",
+    "Rails",
+    "SQL",
+    "MongoDB",
+    "PostgresQL",
+    "Node.js",
+    "Express"
+    ],
+    makeBubbles: function() {
+      for (var i = 0; i < makeSkillBubbles.skills.length; i++) {
+        var skill = "<li>" + this.skills[i] + "</li>";
+        $("ul.skills").append(skill);
+        console.log("hi");
+      }
+    }
+  }
+  makeSkillBubbles.makeBubbles();
 
 
 

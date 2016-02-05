@@ -136,9 +136,10 @@ nav {
      align-self: center;
    }
    a {
+     font-weight: 500;
      &:hover {
        cursor: pointer;
-       font-weight: 500;
+       font-weight: 700;
        background-color: $navBGColorHover;
        letter-spacing: 0.2em;
      }
@@ -367,10 +368,27 @@ div.container-fluid {
   max-width: 1500px;
 }
 /**********************************************
-RESUME & CONTACT
+SKILLS
 ***********************************************/
-ul {
-  font-size: .8em;
+ul.skills {
+  width: 100%;
+  text-align: center;
+   li {
+    list-style: none;
+    font-weight: 500;
+    float: left;
+    background-color: lighten($mainGoldColor, 10%);
+    margin: 1%;
+    border-radius: 100%;
+    padding: 3%;
+    box-shadow: 1px 1px 5px gray;
+    &:hover {
+      background-color: lighten($mainGoldColor, 30%);
+    }
+  }
+}
+ul.contact {
+  clear: both;
 }
 /**********************************************
 FOOTER
@@ -380,6 +398,7 @@ footer {
   background-color: #FFE800;
   font-size: 0.6em;
   padding: 0.5em;
+  clear: both;
 }
 /*************************************
 HAMBURER MENU CLICK FUNCTIONALITY
