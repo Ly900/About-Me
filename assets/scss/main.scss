@@ -381,9 +381,10 @@ ul.skills {
     margin: 1%;
     border-radius: 100%;
     padding: 3%;
-    box-shadow: 1px 1px 5px gray;
+    box-shadow: -1px 5px 5px #CCCACA;
+    @include prefix(transition, 1s ease, webkit moz o);
     &:hover {
-      background-color: lighten($mainGoldColor, 30%);
+      background-color: #00C8FF;
     }
   }
 }
