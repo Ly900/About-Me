@@ -33,6 +33,7 @@ input {
 MAIN STYLES - MOBILE
 ***********************************************/
 $mainGoldColor: #FFE800;
+$mainBlueColor: #00C8FF;
 $navBorderColor: darken($mainGoldColor, 3%);
 $navBarHeight: 2.3em;
 $navBGColorHover: $navBorderColor;
@@ -259,6 +260,33 @@ section {
   padding: 1em;
   text-align: center;
   border-bottom: .05em solid $grayBorderColor;
+  #projects {
+    clear: both;
+  }
+}
+/**********************************************
+ABOUT ME/SOCIAL MEDIA
+***********************************************/
+div.social-media {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  span img.icon {
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    @include prefix(transition, .2s ease, webkit moz o);
+    &:hover {
+      @include prefix(transform, scale(2), webkit ms);
+      cursor: pointer;
+      border: .3em solid $mainGoldColor;
+      border-radius: 100%;
+    }
+    &:active {
+      @include prefix(transform, scale(1), webkit ms);
+      border: .3em solid $mainBlueColor;
+    }
+  }
 }
 /**********************************************
 ALL LINKS
@@ -384,11 +412,19 @@ ul.skills {
     box-shadow: -1px 5px 5px #CCCACA;
     @include prefix(transition, 1s ease, webkit moz o);
     &:hover {
-      background-color: #00C8FF;
+      background-color: $mainBlueColor;
     }
   }
 }
 ul.contact {
+  clear: both;
+}
+div.center {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+div.clear {
   clear: both;
 }
 /**********************************************
@@ -397,8 +433,8 @@ FOOTER
 footer {
   width: 100%;
   background-color: #FFE800;
-  font-size: 0.6em;
-  padding: 0.5em;
+  font-size: .8em;
+  padding: 1.2em;
   clear: both;
 }
 /*************************************
@@ -491,7 +527,7 @@ div.container {
       img#me {
         max-height: 220px;
         max-width: 100%;
-        margin-top: 0;
+        margin-top: 1em;
       }
     }
     h2#blurb {
@@ -512,16 +548,16 @@ div.container {
     }
   } /* ends div image-blurbs-scoot */
 
-
-  section#about-me {
-    max-width: 75%;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 45px;
-  }
-  a.resume {
-    margin-right: auto;
-  }
+  //
+  // section#about-me {
+  //   max-width: 75%;
+  //   margin: 0 auto;
+  //   text-align: left;
+  //   line-height: 45px;
+  // }
+  // a.resume {
+  //   margin-right: auto;
+  // }
 
 
 
