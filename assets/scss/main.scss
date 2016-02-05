@@ -150,10 +150,11 @@ nav {
     }
   } /* Ends div nav links */
 } /* Ends NAV element */
-/**********************************************
-IMAGES - NAV
-***********************************************/
-
+div.container.scoot {
+  img#me {
+    margin-top: 2em;
+  }
+}
 /**********************************************
 IMAGES - BODY
 ***********************************************/
@@ -467,10 +468,11 @@ div.container {
       @include prefix(display, box, webkit);
       @include prefix(flex-direction, column, webkit);
       @include prefix(justify-content, center, webkit moz);
-    }
-    img#me {
-      max-height: 150px;
-      max-width: 100%;
+      img#me {
+        max-height: 220px;
+        max-width: 100%;
+        margin-top: 0;
+      }
     }
     h2#blurb {
       display: none;
@@ -484,7 +486,7 @@ div.container {
         font-weight: 500;
         blockquote {
           line-height: 2;
-          margin: 2em 2em 2em 0em;
+          margin: 3em 2em 2em 0em;
         }
       }
     }
