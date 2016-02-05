@@ -34,7 +34,7 @@ MAIN STYLES - MOBILE
 ***********************************************/
 $mainGoldColor: #FFE800;
 $navBorderColor: darken($mainGoldColor, 3%);
-$navBarHeight: 2.2em;
+$navBarHeight: 2.3em;
 $navBGColorHover: $navBorderColor;
 $navBGColorActive: lighten($mainGoldColor, 20%);
 $blurbBGcolor: lighten($mainGoldColor, 15%);
@@ -58,8 +58,9 @@ ul {
   list-style-position: inside;
 }
 blockquote {
-  border-left: 1em solid darken($mainGoldColor, 2%);
-  border-right: 1em solid darken($mainGoldColor, 2%);
+  // border-left: 1em solid darken($mainGoldColor, 2%);
+  // border-right: 1em solid darken($mainGoldColor, 2%);
+  border: 0;
   margin: 0 2em;
   line-height: 1.5em;
   @include prefix(transition, 1s ease, webkit moz o);
@@ -110,7 +111,8 @@ nav {
     border-bottom: 0.05em solid $navBorderColor;
     height: $navBarHeight;
     img#menu-icon {
-      width: 1.8em;
+      width: 2em;
+      margin-right: .5em;
     }
   }
   div#nav-links {
@@ -237,14 +239,14 @@ div.image-blurbs {
   text-align: center;
   img#me {
     max-width: 50%;
-    margin-bottom: 1.2em;
-    border: 2px solid black;
+    border: .1em solid black;
+    box-shadow: 1px 1px 5px gray;
     @include prefix(border-radius, 100%, webkit moz);
   }
 }
 div.image-blurbs-scoot {
   width: 100%;
-  padding-top: 3em;
+  padding-top: 1em;
   background-color: $blurbBGcolor;
 }
 /**********************************************
@@ -252,10 +254,9 @@ SECTIONS AND PARAGRAPHS
 ***********************************************/
 section {
   width: 100%;
-  // border: 1px solid red;
   padding: 1em;
   text-align: center;
-  border-bottom: 2px solid $grayBorderColor;
+  border-bottom: .05em solid $grayBorderColor;
 }
 /**********************************************
 ALL LINKS
@@ -388,10 +389,10 @@ input[type=checkbox] {
 #toggle + div#nav-links {
   overflow: hidden;
   @include prefix(transition, max-height .2s ease, webkit moz o);
-  height: 0;
+  max-height: 0;
 }
 #toggle:checked + div#nav-links {
-  height: $navBarHeight * 4;
+  max-height: $navBarHeight * 4;
 }
 .scootDown {
   margin-top: $navBarHeight * 4;
@@ -435,15 +436,22 @@ div.container {
       line-height: 1.5;
       a {
         border: none;
-        width: auto;
-        margin-left: 1em;
-        margin-right: 1em;
+        margin: .5em 1em 0 1em;
+        // background-color: #E6CB0C;
+        line-height: 1;
+        background-color: darken($mainGoldColor, 2%);
+        border-radius: 100%;
+        padding: .5em;
+        height: auto;
+        &:hover {
+          background-color: darken($navBGColorHover, 1%);
+        }
+        &:active {
+          background-color: $navBGColorActive;
+        }
       }
     }
   } /* ends nav element */
-  div.image-blurbs img#me {
-
-  }
   div.image-blurbs-scoot {
     width: 100%;
     @include prefix(display, flex, webkit ms);
@@ -452,6 +460,7 @@ div.container {
     @include prefix(flex-direction, row, webkit);
     @include prefix(justify-content, flex-start, webkit moz);
     div.container.scoot {
+      margin-top: 0;
       width: 100%;
       @include prefix(display, flex, webkit ms);
       @include prefix(display, flexbox, ms);
@@ -475,8 +484,7 @@ div.container {
         font-weight: 500;
         blockquote {
           line-height: 2;
-          padding: 0;
-          margin: 0 2em 1em 0em;
+          margin: 2em 2em 2em 0em;
         }
       }
     }
