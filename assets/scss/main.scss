@@ -131,6 +131,7 @@ nav {
      text-decoration: none;
      color: black;
      text-align: center;
+     align-self: center;
    }
    a {
      &:hover {
@@ -226,7 +227,6 @@ section p {
   text-align: center;
   margin-bottom: 1em;
 }
-
 .small-font {
   font-size: 0.8em;
 }
@@ -416,33 +416,73 @@ div.container {
     @include prefix(align-items, center, webkit);
     @include prefix(justify-content, flex-start, webkit moz);
     ul#brand-and-icon {
-      // border: 2px solid orange;
       border-bottom: none;
       text-align: center;
-      width: 10%;
+      width: 20%;
+      margin-left: 1%;
+      label#menu-icon {
+        display: none;
+      }
     }
     #toggle + div#nav-links {
-      // border: 2px solid blue;
       @include prefix(display, flex, webkit ms);
       @include prefix(display, flexbox, ms);
       @include prefix(display, box, webkit);
       @include prefix(flex-direction, row, webkit);
-      height: auto;
+      height: $navBarHeight;
       width: 100%;
       overflow: visible;
+      line-height: 1.5;
       a {
         border: none;
         width: auto;
-        // border: 2px solid red;
         margin-left: 1em;
         margin-right: 1em;
-        &:hover {
-          letter-spacing: .1em;
-          background-color: $mainGoldColor;
+      }
+    }
+  } /* ends nav element */
+  div.image-blurbs img#me {
+
+  }
+  div.image-blurbs-scoot {
+    width: 100%;
+    @include prefix(display, flex, webkit ms);
+    @include prefix(display, flexbox, ms);
+    @include prefix(display, box, webkit);
+    @include prefix(flex-direction, row, webkit);
+    @include prefix(justify-content, flex-start, webkit moz);
+    div.container.scoot {
+      width: 100%;
+      @include prefix(display, flex, webkit ms);
+      @include prefix(display, flexbox, ms);
+      @include prefix(display, box, webkit);
+      @include prefix(flex-direction, column, webkit);
+      @include prefix(justify-content, center, webkit moz);
+    }
+    img#me {
+      max-height: 150px;
+      max-width: 100%;
+    }
+    h2#blurb {
+      display: none;
+    }
+    div.blurb {
+      max-width: 75%;
+      margin-right: 5%;
+      margin-top: 1%;
+      h3.blurb {
+        display: inline-block;
+        font-weight: 500;
+        blockquote {
+          line-height: 2;
+          padding: 0;
+          margin: 0 2em 1em 0em;
         }
       }
     }
-  }
+  } /* ends div image-blurbs-scoot */
+
+
   section#about-me {
     max-width: 75%;
     margin: 0 auto;
@@ -452,38 +492,8 @@ div.container {
   a.resume {
     margin-right: auto;
   }
-  div.blurb,
-  blockquote,
-  blockquote:before {
-    display: inline-block;
-  }
-  div.container {
-    margin: 0;
-  }
-  h3 {
-    display: inline-block;
-    font-weight: 500;
-  }
-  label#menu-icon {
-    display: none;
-  }
-  img#me {
-    width: 150px;
-  }
-  h2#blurb {
-    font-size: 1.5em;
-  }
-  div.image-blurbs {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  div.blurb {
-    max-width: 50%;
-    align-self: center;
-    display: none;
-  }
+
+
+
 }
-/* ends @media */
+/* ends @media for large screens */
