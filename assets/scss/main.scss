@@ -342,7 +342,7 @@ div.card-wrapper {
     flex-grow: 2;
     div.languages {
       text-align: left;
-      font-size: .7em;
+      font-size: 1em;
       margin-bottom: auto;
       padding: 1em;
       margin-top: 0.8em;
@@ -352,7 +352,7 @@ div.card-wrapper {
       padding: 1em;
       p {
         text-align: justify;
-        font-size: .8em;
+        font-size: 1em;
       }
     }
   }
@@ -379,26 +379,69 @@ footer {
   font-size: 0.6em;
   padding: 0.5em;
 }
+/*************************************
+HAMBURER MENU CLICK FUNCTIONALITY
+*************************************/
+input[type=checkbox] {
+  display: none;
+}
+#toggle + div#nav-links {
+  overflow: hidden;
+  @include prefix(transition, max-height .2s ease, webkit moz o);
+  height: 0;
+}
+#toggle:checked + div#nav-links {
+  height: $navBarHeight * 4;
+}
+.scootDown {
+  margin-top: $navBarHeight * 4;
+}
+ul li.icon {
+  margin-right: auto;
+}
+div.container {
+  max-width: 100%;
+  @include prefix(transition, all .2s ease, webkit moz o)
+}
 /*************************************/
 /* WHEN THE SCREEN IS LARGE: > 650px */
 /*************************************/
 @media (min-width: 651px) {
   nav {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    align-items: center;
-  }
-  ul#brand-and-icon,
-  div#nav-links a {
-    border: none;
-  }
-  div#nav-links a:hover {
-    color: $linkHoverColor;
-  }
-  nav a {
-    margin-right: 20px;
+    @include prefix(display, flex, webkit ms);
+    @include prefix(display, flexbox, ms);
+    @include prefix(display, box, webkit);
+    @include prefix(flex-direction, row, webkit);
+    @include prefix(align-content, space-around, webkit);
+    @include prefix(align-items, center, webkit);
+    @include prefix(justify-content, flex-start, webkit moz);
+    ul#brand-and-icon {
+      // border: 2px solid orange;
+      border-bottom: none;
+      text-align: center;
+      width: 10%;
+    }
+    #toggle + div#nav-links {
+      // border: 2px solid blue;
+      @include prefix(display, flex, webkit ms);
+      @include prefix(display, flexbox, ms);
+      @include prefix(display, box, webkit);
+      @include prefix(flex-direction, row, webkit);
+      height: auto;
+      width: 100%;
+      overflow: visible;
+      a {
+        border: none;
+        width: auto;
+        // border: 2px solid red;
+        margin-left: 1em;
+        margin-right: 1em;
+        &:hover {
+          letter-spacing: .1em;
+          background-color: $mainGoldColor;
+        }
+      }
+    }
   }
   section#about-me {
     max-width: 75%;
@@ -444,27 +487,3 @@ footer {
   }
 }
 /* ends @media */
-/*************************************
-HAMBURER MENU CLICK FUNCTIONALITY
-*************************************/
-input[type=checkbox] {
-  display: none;
-}
-  #toggle + div#nav-links {
-    overflow: hidden;
-    @include prefix(transition, max-height .2s ease, webkit moz o);
-    max-height: 0;
-  }
-  #toggle:checked + div#nav-links {
-    max-height: $navBarHeight * 4;
-  }
-  .scootDown {
-    margin-top: $navBarHeight * 4;
-  }
-  ul li.icon {
-    margin-right: auto;
-  }
-  div.container {
-    max-width: 100%;
-    @include prefix(transition, all .2s ease, webkit moz o)
-  }
