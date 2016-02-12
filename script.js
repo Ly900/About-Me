@@ -52,7 +52,7 @@ $(document).ready(function(){
       for (var i = 0; i < makeSkillBubbles.skills.length; i++) {
         var skill = "<li>" + this.skills[i] + "</li>";
         $("ul.skills").append(skill);
-        console.log("hi");
+        console.log("Hi! Thanks for visiting!");
       }
     }
   }

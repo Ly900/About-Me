@@ -46,6 +46,7 @@ $blueColor: #00CFFF;
 
 html {
   font-size: 20px;
+  background-color: lighten($mainGoldColor, 45%);
 }
 body {
   font: {
@@ -54,6 +55,11 @@ body {
     weight: 300;
   }
   letter-spacing: .1em;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px darken($mainGoldColor, 30%);
+  // border: 5px solid red;
 }
 ul {
   list-style-position: inside;
@@ -92,6 +98,7 @@ nav {
   @include prefix(flex-direction, column, webkit);
   @include prefix(justify-content, center, webkit);
   width: 100%;
+  max-width: 1500px;
   background-color: $mainGoldColor;
   font-variant: small-caps;
   position: fixed;
@@ -400,6 +407,8 @@ CONTAINERS AND DIVS
 div.container-fluid {
   padding: 0;
   max-width: 1500px;
+  margin: 0 auto;
+  // border: 10px solid blue;
 }
 /**********************************************
 SKILLS
@@ -479,6 +488,7 @@ div.container {
     @include prefix(align-content, space-around, webkit);
     @include prefix(align-items, center, webkit);
     @include prefix(justify-content, flex-start, webkit moz);
+    width: 100%;
     ul#brand-and-icon {
       border-bottom: none;
       text-align: center;
@@ -553,19 +563,5 @@ div.container {
       }
     }
   } /* ends div image-blurbs-scoot */
-
-  //
-  // section#about-me {
-  //   max-width: 75%;
-  //   margin: 0 auto;
-  //   text-align: left;
-  //   line-height: 45px;
-  // }
-  // a.resume {
-  //   margin-right: auto;
-  // }
-
-
-
 }
 /* ends @media for large screens */
