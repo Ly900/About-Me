@@ -49,7 +49,9 @@ $(document).ready(function(){
       "PostgresQL",
       "Node.js",
       "Express",
-      "Photoshop CC"
+      "Photoshop CC",
+      "Liquid",
+      "Shopify"
       ],
       makeBubbles: function() {
         for (var i = 0; i < makeSkillBubbles.skills.length; i++) {
