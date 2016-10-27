@@ -129,6 +129,9 @@ nav {
     @include prefix(display, box, webkit);
     @include prefix(flex-direction, column, webkit);
     @include prefix(align-items, center, webkit);
+    a {
+      transition: letter-spacing .5s;
+    }
     a,
     a:hover,
     a:active,
@@ -337,8 +340,10 @@ div.card-wrapper {
   @include prefix(display, box, webkit);
   @include prefix(flex-direction, column, webkit);
   @include prefix(justify-content, stretch, moz webkit);
-  // align-items: stretch;
-  // align-content: stretch;
+  transition: transform 1s;
+  &:hover {
+    transform: scale(1.1);
+  }
   h5 {
     font: {
       size: 100%;
