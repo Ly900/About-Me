@@ -49,6 +49,7 @@ $(document).ready(function(){
       "PostgresQL",
       "Node.js",
       "Express",
+      "Java",
       "Photoshop CC",
       "Liquid",
       "Shopify"
