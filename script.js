@@ -34,25 +34,16 @@ $(document).ready(function(){
       [
       "HTML5",
       "CSS3",
-      "SASS",
+      "Sass",
       "Bootstrap",
       "Javascript",
       "JQuery",
       "Ajax",
-      "Angular",
+      "React",
       "Git",
       "Github",
-      "Ruby",
-      "Rails",
-      "SQL",
-      "MongoDB",
-      "PostgresQL",
-      "Node.js",
-      "Express",
-      "Java",
       "Photoshop CC",
-      "Liquid",
-      "Shopify"
+      "AEM"
       ],
       makeBubbles: function() {
         for (var i = 0; i < makeSkillBubbles.skills.length; i++) {
