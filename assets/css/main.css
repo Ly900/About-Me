@@ -319,7 +319,7 @@ div.all-cards {
   justify-content: space-around; }
 
 div.card-wrapper {
-  max-width: 29%;
+  max-width: 46%;
   margin: 2em 2%;
   min-width: 250px;
   box-shadow: .1em .1em 10px gray;
@@ -357,10 +357,15 @@ div.card-wrapper {
   div.card-wrapper div.project-image {
     text-align: center;
     width: 100%;
-    height: 150px;
+    height: 120px;
     overflow: hidden; }
+    @media screen and (min-width: 780px) {
+      div.card-wrapper div.project-image {
+        height: 168px; } }
+    @media screen and (min-width: 1200px) {
+      div.card-wrapper div.project-image {
+        height: 250px; } }
     div.card-wrapper div.project-image img {
-      min-height: 150px;
       width: 100%; }
   div.card-wrapper div.description-container {
     padding: .2em;
